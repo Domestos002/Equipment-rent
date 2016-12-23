@@ -1,0 +1,163 @@
+@import _imports.sass
+
+/*--------------------------------------------------------------------*/
+//~ICONS
+
+//[class*='icon-']
+    font-family: $font-icon
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1em
+    font-size: 14px
+    speak: none
+    display: inline-block
+
+
+
+/*--------------------------------------------------------------*/
+//~TXT
+
+.txt-bold
+    font-weight: bold
+
+.txt-light
+    font-weight: 600
+
+.txt-normal
+    font-weight: 600
+
+.base-text
+    p
+        &:not(:last-child)
+            margin-bottom: 40px
+
+.content-title
+    font-size: 50px
+    line-height: 50px
+
+*:not(.tdu)
+    text-decoration: none
+
+.td-th
+    text-decoration: line-through !important
+
+h1
+    font-size: 60px
+h2
+    font-size: 50px
+h3
+    font-size: 50px
+
+h1, h2, h3, h4, h5, h6
+    font-family: $font-base
+
+
+.no-gutter > [class*='col-']
+    padding-right: 0
+    padding-left: 0
+    &:before
+        content: ''
+        display: block
+        clear: both
+
+.overlay
+    position: relative
+    &:hover
+        &:before
+            z-index: 400
+            position: absolute
+            top: 0
+            right: 0
+            width: 100%
+            height: 100%
+            background: rgba(0, 0, 0, 0.3)
+            content: ''
+
+.img-responsive
+    //min-width: 100%
+    max-width: 100%
+    height: auto
+
+.fluid
+    width: 100%
+    height: auto
+
+.clearfix
+    &:before
+        display: table
+        content: ''
+        clear: both
+        height: 100%
+
+.lh-normal
+    line-height: 1em
+
+/*----------------------------------*/
+//~FZ
+
+@each $fz in (60, 20, 25, 50, 40, 15, 30)
+    .fz#{$fz}
+        font-size: $fz + px
+
+/*----------------------------------*/
+//~LH
+
+@each $lh in (22, 24, 72, 60, 50, 20, 26, 18, 48, 36, 23)
+    .lh#{$lh}
+        line-height: $lh + px
+
+
+/*----------------------------------*/
+//~TXT-COLORS
+
+.txt-brown
+    color: $brown
+
+.txt-white
+    color: #fff
+    
+.txt-black
+    color: $black
+
+.brand-hover
+    +trans()
+    &:hover
+        color: $color-brand
+        > *
+            +trans()
+            color: $color-brand
+
+//.no-hover
+    &:hover
+
+
+
+/*--------------------------------------------------------------*/
+//~BTN
+
+.btn
+    font-family: $font-base-bold
+    background-color: #fff
+    padding: 0 15px 0 15px
+    color: $black
+    line-height: 30px
+    //whte
+    border-radius: 5px
+    max-width: 305px
+    border: 1px solid black
+    white-space: normal !important
+    &.brn
+        border-radius: 0
+
+    [class*="uk-icon"]
+        margin-right: 5px
+
+
+.stucco-bg
+    background-image: url("../images/noisy.png")
+
+
+
+

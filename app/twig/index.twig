@@ -1,16 +1,239 @@
 {% extends "layouts/app.twig" %}
 
 {% block pageTitle %}Главная страница{% endblock %}
-
-<style>
-    .hello {
-        border: 2px solid #ffaaaa;
-    }
-</style>
-
 {% block content %}
-    <div class="logo"><i class="fri fri-qube-logo"></i></div>
-    <li class="hello"></li>
-    <li class="hello"></li>
-    <li class="hello"></li>
+    <div class="b-page-content">
+        <div class="b-catalogue-preview preview stucco-bg">
+            <div class="uk-container uk-container-center tac p-rel">
+                <p class="preview__title content-title txt-brown">
+                    Каталог
+                </p>
+                <div class="preview__list list uk-grid fx-items-end">
+                    <div class="uk-width-small-1-1 uk-width-medium-1-4">
+                        <div class="list__item item">
+                            <div class="img-wrapper"><img src="images/eq1.png" alt=""></div>
+                            <div class="item__caption">
+                                <p class="fz25 lh30 txt-brown">
+                                    Название техники
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-small-1-1 uk-width-medium-1-4">
+                        <div class="list__item item">
+                            <div class="img-wrapper"><img src="images/eq2.png" alt=""></div>
+                            <div class="item__caption">
+                                <p class="fz25 lh30 txt-brown">
+                                    Название техники
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-small-1-1 uk-width-medium-1-4">
+                        <div class="list__item item">
+                            <div class="img-wrapper"><img src="images/eq3.png" alt=""></div>
+                            <div class="item__caption">
+                                <p class="fz25 lh30 txt-brown">
+                                    Название техники
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="uk-width-small-1-1 uk-width-medium-1-4">
+                        <div class="list__item item">
+                            <div class="img-wrapper"><img src="images/eq4.png" alt=""></div>
+                            <div class="item__caption">
+                                <p class="fz25 lh30 txt-brown">
+                                    Название техники
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="b-advantages advantages">
+            <div class="uk-container uk-container-center tac">
+                <p class="txt-brown blya content-title mb20">
+                    Аренда строительной и дорожной спецтехники
+                    на любой срок
+                </p>
+                <p class="fz20 lh24 txt-brown mb55">
+                    Ищете современную и надёжную компанию по аренде спецтехники?
+                    Тогда вам точно к нам, потому что:
+                </p>
+                <div class="b-advantages-markered-list markered-list mb25">
+                    <ul class="markered-list__inner">
+                        <li class="markered-list__item item">
+                            <div class="item__number"></div>
+                            <p class="fz20 lh24">
+                                Мы - одна из крупных компаний Москвы и Московской области, профессионально занимающаяся
+                                предоставлением в аренду широкого перечня строительной и дорожной техники.
+                            </p>
+                        </li>
+                        <li class="markered-list__item item">
+                            <div class="item__number"></div>
+                            <p class="fz20 lh24">
+                                Мы успешно работаем в своей отрасли уже более 10 лет.
+                            </p>
+                        </li>
+                        <li class="markered-list__item item">
+                            <div class="item__number"></div>
+                            <p class="fz20 lh24">
+                                Мы - одна из крупных компаний Москвы и Московской области, профессионально занимающаяся
+                                предоставлением в аренду широкого перечня строительной и дорожной техники.
+
+                                Мы успешно работаем в своей отрасли уже более 10 лет.
+
+                                Мы предоставим вам только качественные, проверенные модели, идеально отвечающие вашим
+                                требованиям на любой срок.
+
+                            </p>
+                        </li>
+                        <li class="markered-list__item item">
+                            <div class="item__number"></div>
+                            <p class="fz20 lh24">
+                                Большинство наших клиентов получают необходимую им спецтехнику в течение 2 часов после
+                                оформления заказа!
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="content-title txt-brown mb25">Наши предложения</p>
+                <p class="fz20 lh24">
+                    Мы предлагаем прокат спецтехники как широкого так и узкоспециализированного назначения. Наши машины
+                    работают на самых разных объектах в Москве и Московской области. У нас большой парк строительной и
+                    дорожной техники а также вспомогательного оборудования.
+                </p>
+            </div>
+        </div>
+        <div class="b-benefit">
+            <div class="uk-container uk-container-center">
+                <div class="tac mb35">
+                    <p class="txt-white content-title mb35">
+                        Почему с нами выгодно работать:
+                    </p>
+                </div>
+                <div class="b-content-list content-list txt-white">
+                    <ul class="content-list__list list">
+                        <li class="list-item">
+                            Потому что у нас индивидуальный подход к каждому клиенту
+                        </li>
+                        <li class="list-item">
+                            При поломке спецтехники на объекте мы предоставим вам её полноценную замену.
+                        </li>
+                        <li class="list-item">
+                            Мы быстро доставляем спецтехнику на объект клиента, используя для этого специальные
+                            низкорамные
+                            платформы.
+                        </li>
+                        <li class="list-item">
+                            Все сопровождающие документы готовит профессиональный бухгалтер.
+                        </li>
+                        <li class="list-item">
+                            Потому что у нас действует специальная гибкая система скидок на заказы более 1 единицы
+                            спецтехники.
+                        </li>
+                        <li class="list-item">
+                            Потому что мы предлагаем только современные и надёжные модели.
+                        </li>
+                        <li class="list-item">
+                            Потому что мы работаем в любые праздники и выходные по обычным тарифам будних дней.
+                        </li>
+                        <li class="list-item">
+                            Время аренды строительной техники начинается с момента ее прибытия на объект, а все нюансы
+                            ее
+                            использования оговариваются индивидуально и включаются в договорные обязательства.
+                        </li>
+                        <li class="list-item">
+                            У нас большой парк узкопрофилированной спецтехники - вы сможете провести самые сложные
+                            работы по монтажу элементов конструкций, бетонированию, транспортировке и работам в
+                            труднодоступных местах.
+                        </li>
+                        <li class="list-item">
+                            В цену аренды уже входит стоимость ГСМ и других расходных материалов связанных с ее
+                            обслуживанием.
+                        </li>
+                        <li class="list-item">
+                            Мы всегда готовы к гибким условиям сотрудничества.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="b-additional-service tac stucco-bg">
+            <div class="uk-container uk-container-center">
+                <p class="txt-brown content-title mb15">
+                    Аренда спецтехники на выгодных условиях
+                </p>
+                <p class="fz20 lh24 txt-brown mb25">
+                    Наши преимущества <br>
+                    Мы предоставляем дополнительные услуги по транспортному обслуживанию и следующим
+                    погрузо-разгрузочным
+                    работам:
+                </p>
+                <div class="b-content-list content-list txt-black mb40">
+                    <ul class="content-list__list list">
+                        <li class="list-item">
+                            разработка котлована с применением техники оптимальной мощности и размеров;
+                        </li>
+                        <li class="list-item">
+                            доставка сыпучих материалов и грузов на стройплощадку в строго оговоренные сроки;
+                        </li>
+                        <li class="list-item">
+                            вывоз грунта и вывоз строительного мусора в любом объеме;
+                        </li>
+                        <li class="list-item">
+                            снос и демонтаж зданий и сооружений;
+                        </li>
+                        <li class="list-item">
+                            благоустройство и озеленение территорий после окончания строительных работ;
+                        </li>
+                        <li class="list-item">
+                            сезонная уборка и вывоз снега.
+                        </li>
+                    </ul>
+                </div>
+                <div class="lh28 fz20 base-text tal">
+                    <p>Чтобы сделать заказ воспользуйтесь информацией из раздела «Контакты». В случае, если вы не
+                        сможете
+                        дозвониться, то можно оставить свой контактный телефон через форму обратной связи(справа
+                        наверху,
+                        кликнув по нашему телефонному номеру), и наши менеджеры с вами быстро свяжутся.</p>
+                    <p>Обращайтесь, наши цены вас приятно удивят! </p>
+                </div>
+            </div>
+        </div>
+        <div class="b-actions">
+            <div class="uk-container uk-container-center">
+                <div class="tac mb30">
+                    <p class="txt-brown content-title">
+                        Наши акции!
+                    </p>
+                </div>
+                <div class="b-actions__slider slider uk-slidenav-position" data-uk-slideshow>
+                    <ul class="uk-slideshow">
+                        {% for i in 1..4 %}
+                            <li>
+                                <div class="img-wrapper">
+                                    <img src="http://placehold.it/1170x340" alt="">
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <div class="slider-dots-wrapper p-rel">
+                        <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+                            <li data-uk-slideshow-item="0"><a href=""></a></li>
+                            <li data-uk-slideshow-item="1"><a href=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
 {% endblock %}
