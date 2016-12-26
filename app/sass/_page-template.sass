@@ -22,6 +22,7 @@
 .txt-bold
     font-weight: bold
 
+
 .txt-light
     font-weight: 600
 
@@ -97,14 +98,14 @@ h1, h2, h3, h4, h5, h6
 /*----------------------------------*/
 //~FZ
 
-@each $fz in (60, 20, 25, 50, 40, 15, 30)
+@each $fz in (12, 18, 60, 20, 25, 50, 40, 15, 30)
     .fz#{$fz}
         font-size: $fz + px
 
 /*----------------------------------*/
 //~LH
 
-@each $lh in (22, 24, 72, 60, 50, 20, 26, 18, 48, 36, 23)
+@each $lh in (14, 22, 24, 72, 60, 50, 20, 26, 18, 48, 36, 23)
     .lh#{$lh}
         line-height: $lh + px
 
@@ -115,11 +116,27 @@ h1, h2, h3, h4, h5, h6
 .txt-brown
     color: $brown
 
+*.cur-p.txt-white
+    &:hover
+        color: #fff * 0.8
+
+a.txt-white
+    &:hover
+        color: #fff * 0.8
+
+a.txt-black
+    &:hover
+        color: $black / 0.8
+
+
 .txt-white
     color: #fff
-    
+
 .txt-black
     color: $black
+
+.txt-red
+    color: $red
 
 .brand-hover
     +trans()
@@ -143,16 +160,21 @@ h1, h2, h3, h4, h5, h6
     padding: 0 15px 0 15px
     color: $black
     line-height: 30px
-    //whte
     border-radius: 5px
     max-width: 305px
     border: 1px solid black
     white-space: normal !important
+    .f-base
+        font-family: $font-base
     &.brn
         border-radius: 0
 
     [class*="uk-icon"]
         margin-right: 5px
+
+.orange_btn
+    background: $orange
+    color: #fff
 
 
 .stucco-bg

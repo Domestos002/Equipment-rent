@@ -1,0 +1,94 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+{% block content %}
+    <div class="b-page-content">
+        <div class="b-catalog stucco-bg">
+            {% include "widgets/breadcrumb.twig" %}
+            <div class="uk-container uk-container-center">
+                <div class="mb45">
+                    <p class="preview__title content-title txt-brown">Каталог строительной и дорожной спецтехники</p>
+                </div>
+                <div class="b-catalog__contain contain">
+                    <div class="contain__sidebar sidebar">
+                        {% for i in 1..2 %}
+                            <div class="sidebar__item item">
+                                <ul class="uk-nav uk-nav-parent-icon" data-uk-nav="{multiple:true}">
+                                    <li class="uk-parent">
+                                        <a class="item__title fz18 lh22" href="#">Колесные экскаваторы</a>
+                                        <ul class="item__contain uk-nav-sub fz18 txt-black">
+                                            <li><a href="#">Экскаватор 1</a></li>
+                                            <li><a href="#">Экскаватор 2</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        {% endfor %}
+
+                    </div>
+                    <div class="contain__main main">
+                        {% for i in 1..1 %}
+                            <div class="main__item item">
+                                <div class="item__img">
+                                    <div class="mb15">
+                                        <a href="#" class="txt-brown tdu fz25 lh25 mb15">Камаз</a>
+                                    </div>
+                                    <div class="img-wrapper mb22">
+                                        <img src="http://placehold.it/200x135" alt="">
+                                    </div>
+                                    <a href="#" class="btn db orange_btn tac fz25 lh30 f-base">Заказать</a>
+                                </div>
+                                <div class="item__info info">
+                                    <div class="info__overall mb35 overall">
+                                        <div class="overall__row fz20 txt-black">
+                                            <span>Эксплуатационная масса:</span>
+                                            <span></span>
+                                            <span>от 2 000 руб.</span>
+                                        </div>
+                                        <div class="overall__row fz20 txt-black">
+                                            <span>Емкость ковша:</span>
+                                            <span></span>
+                                            <span>1м3</span>
+                                        </div>
+                                        <div class="overall__row fz20 txt-black">
+                                            <span>Максимальная глубина копания:</span>
+                                            <span></span>
+                                            <span>6,2 м</span>
+                                        </div>
+                                        <div class="overall__row fz20 txt-black">
+                                            <span>Мощность двигателя:</span>
+                                            <span></span>
+                                            <span>172 л.с.</span>
+                                        </div>
+                                    </div>
+                                    <div class="info__result result">
+                                        <div class="result__row">
+                                            <span>Цена за смену</span>
+                                            <span></span>
+                                            <span>от 11 500 руб.</span>
+                                        </div>
+                                        <div class="result__row">
+                                            <span>Доставка</span>
+                                            <span></span>
+                                            <span>от 12 000 руб.</span>
+                                        </div>
+                                    </div>
+                                    <p class="txt-red fz12 lh14">* - Зависит от объёма предполагаемых работ</p>
+                                </div>
+
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        {% include "widgets/b-stock.twig" %}
+
+    </div>
+
+
+
+
+{% endblock %}

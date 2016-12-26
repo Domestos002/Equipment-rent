@@ -1,0 +1,57 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Главная страница{% endblock %}
+{% block content %}
+    <div class="b-page-content">
+
+
+    <div class="b-contacts stucco-bg mb35">
+        <div class="mb15">{% include "widgets/breadcrumb.twig" %}</div>
+        <div class="uk-container uk-container-center">
+            <div class="mb45">
+                <div class="tac">
+                    <p class="preview__title content-title txt-brown mb22">
+                        Контакты
+                    </p>
+                </div>
+                <div class="b-contacts__info info">
+                    <div class="info__item">
+                        <span class="uk-icon-button uk-icon-building-o"></span>
+                        <p class="fz25 lh30 txt-black">
+                            г. Алматы, ул. Уличная, 456
+                        </p>
+                    </div>
+                    <div class="info__item">
+                        <span class="uk-icon-button uk-icon-phone"></span>
+                        <p class="fz25 lh30 txt-black">
+                            <a href="#" class="txt-black">8 (727) 592-57-90</a>
+                            , 594-48-41, факс: 8 (727) 592-57-90, 594-48-41, 8 7777 350-350
+                        </p>
+                    </div>
+                    <div class="info__item">
+                        <a href="" class="uk-icon-button uk-icon-envelope-o"></a>
+                        <p class="fz25 lh30 txt-black">
+                            с 9.00 до 18.00 часов, ежедневно
+                        </p>
+                    </div>
+                    <div class="info__item">
+                        <span class="uk-icon-button uk-icon-clock-o"></span>
+                        <p class="fz25 lh30 txt-black">
+                            <a href="#" class="txt-black">arenda@mail.ru</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="b-contacts__map" id="map">
+
+        </div>
+
+    </div>
+        {% include "widgets/b-stock.twig" %}
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=tr_TR" type="text/javascript"></script>
+    <script src="js/YaMap.js"></script>
+
+{% endblock %}

@@ -2,10 +2,14 @@
 // VARIABLES: GLOBAL
 /*-------------------------------------*/
 // Screens:
-$screen-xs:                  480px
-$screen-sm:                  768px
-$screen-md:                  992px
-$screen-lg:                  1200px
+$breakpoint-small:                               480px
+$breakpoint-medium:                              768px
+$breakpoint-large:                               960px
+$breakpoint-xlarge:                              1220px
+$breakpoint-mini-max:                            ($breakpoint-small - 1)
+$breakpoint-small-max:                           ($breakpoint-medium - 1)
+$breakpoint-medium-max:                          ($breakpoint-large - 1)
+$breakpoint-large-max:                          ($breakpoint-xlarge - 1)
 
 /*-------------------------------------*/
 // Colors:
@@ -15,6 +19,8 @@ $brown: #b25900
 $black: #333333
 $color-brand: $orange
 $grey: #aaaaaa
+$red: #ff0000
+
 
 // Colors: Brand
 
@@ -36,7 +42,7 @@ $red-pinterest: #ce1f21
 
 // Fonts: Base styles
 $font-base: "BloggerSans"
-$font-base-bold: ""
+$font-base-bold: "BloggerSans-Bold"
 $font-base-italic: ""
 $font-size-base: 18px
 

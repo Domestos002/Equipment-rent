@@ -204,33 +204,7 @@
                 </div>
             </div>
         </div>
-        <div class="b-actions">
-            <div class="uk-container uk-container-center">
-                <div class="tac mb30">
-                    <p class="txt-brown content-title">
-                        Наши акции!
-                    </p>
-                </div>
-                <div class="b-actions__slider slider uk-slidenav-position" data-uk-slideshow>
-                    <ul class="uk-slideshow">
-                        {% for i in 1..4 %}
-                            <li>
-                                <div class="img-wrapper">
-                                    <img src="http://placehold.it/1170x340" alt="">
-                                </div>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                    <div class="slider-dots-wrapper p-rel">
-                        <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
-                            <li data-uk-slideshow-item="0"><a href=""></a></li>
-                            <li data-uk-slideshow-item="1"><a href=""></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        {% include "widgets/b-stock.twig" %}
     </div>
 
 
