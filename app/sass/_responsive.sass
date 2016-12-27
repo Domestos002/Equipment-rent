@@ -4,9 +4,146 @@
         width: 175px
 
 @media (max-width: $breakpoint-medium-max)
+    .b-catalog__contain-sidebar
+        width: 100%
+        margin-bottom: 30px
+
+    .b-catalog__contain
+        flex-direction: column
+        align-items: center
+
+    .b-catalog__contain-main
+        width: 100%
+        &-img
+            width: 100%
+            max-width: 100%
+            padding: 20px 25px
+            justify-content: center
+            .img-wrapper
+                max-width: 100%
+        &-info
+            width: initial
+            max-width: 100%
 
 
-//@media (max-width: $screen-md - 1px)
+
+    .b-catalog__contain-main-item
+        padding-bottom: 20px
+        flex-direction: column
+        .btn
+            max-width: 100%
+
+    .b-catalog__contain-main-info
+        padding: 0 25px
+
+    .b-first-screen__content
+        padding-left: 25px
+        padding-right: 25px
+
+    .b-catalog
+        padding-top: 65px
+
+    .b-page-footer__dark-panel
+        padding-top: 15px
+        padding-bottom: 15px
+
+    .b-page-footer__dark-panel-column-wrapper
+        .b-page-footer__dark-panel-column
+            padding: 0
+        &:first-child, &:last-child
+            .b-page-footer__dark-panel-column-contain
+                border: none
+                justify-content: center
+                align-items: center
+                text-align: center
+        &:last-child
+            .b-page-footer__dark-panel-column-contain
+                padding-top: 0
+                &:before
+                    margin-bottom: 15px
+                    margin-top: 15px
+                    content: ''
+                    display: block
+                    width: 80%
+                    height: 1px
+                    background-color: #555555
+                    box-shadow: 0 1px 0 0 rgba(34, 34, 34, 1)
+
+        &:first-child
+            .b-page-footer__dark-panel-column-contain
+                padding: 0
+                &:after
+                    margin-bottom: 15px
+                    margin-top: 15px
+                    content: ''
+                    display: block
+                    width: 80%
+                    height: 2px
+                    background-color: #555555
+                    box-shadow: 0 1px 0 0 rgba(34, 34, 34, 1)
+
+        .b-page-footer__dark-panel-column-contain
+            border: none
+            justify-content: center
+            padding: 0
+
+    .tablet-items-top
+        align-items: flex-start
+
+    .tablet-row
+        flex-direction: row
+
+    .icon-statistic
+        &:not(:last-child)
+            margin-right: 40px
+
+    .tablet-center
+        justify-content: center
+
+
+    .b-page-footer__dark-panel-column-item
+        &:not(:last-child)
+            margin-right: 20%
+
+    .b-page-header__navbar
+        .uk-parent
+            display: block
+
+@media (max-width: $breakpoint-mini-max)
+    .m-fz15
+        font-size: 15px
+
+@media (max-width: $breakpoint-small-max)
+    .b-first-screen
+        min-height: 360px
+        .uk-container
+            min-height: 360px
+
+    .content-title
+        font-size: 25px
+        line-height: 1.2em
+
+    .b-stock
+        padding-top: 20px
+        padding-bottom: 20px
+
+
+@media (max-width: 400px)
+
+
+    .b-header-logo
+        width: 245px
+
+    .b-header-logo
+        font-size: 40px
+
+    .sm-fz33
+        font-size: 33px
+
+    .b-first-screen__content
+        align-items: center
+        justify-content: space-around
+
 
 
 

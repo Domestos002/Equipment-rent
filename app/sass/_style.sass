@@ -36,8 +36,9 @@ input
         min-height: 577px
 
 .b-first-screen__content
+    align-items: flex-end
     max-width: 1203px
-    +position(absolute, 9px 0 96px 0)
+    +position(absolute, 15px 0 96px 0)
 
 .b-page-header
     margin-bottom: -75px
@@ -306,10 +307,9 @@ input
     background-image: linear-gradient(to top, #3d1b0c, #a85225)
 
 .b-footer-logo
-    max-width: 238px
-    max-height: 72px
-    width: 100%
-    height: 100%
+    text-align: left
+    width: 238px
+    height: 72px
 
 .icon-statistic
     +sprite(statistic)
@@ -327,7 +327,7 @@ input
         vertical-align: top
         background-color: #fff
         border: 1px solid #cccccc
-        width: 19.23%
+        width: 225px
         &-item
             .uk-nav
                 > li > a
@@ -368,7 +368,7 @@ input
     &-main
         display: inline-block
         vertical-align: top
-        width: calc(100% - 19.23% - 25px)
+        width: calc(100% - 245px)
         &-item
             border: 1px solid #cccccc
             display: flex
@@ -465,3 +465,9 @@ input
                 content: '-'
             a
                 color: $black
+
+.b-header-logo
+    line-height: 1em
+    text-align: left
+    width: 350px
+    height: 100px
