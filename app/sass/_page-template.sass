@@ -42,7 +42,7 @@
     text-decoration: none
 
 .td-th
-    text-decoration: line-through !important
+    text-decoration: line-through
 
 h1
     font-size: 60px
@@ -95,6 +95,11 @@ h1, h2, h3, h4, h5, h6
 .lh-normal
     line-height: 1em
 
+
+.font-bold
+    font-family: $font-base-bold
+    font-weight: normal
+
 /*----------------------------------*/
 //~FZ
 
@@ -123,6 +128,14 @@ h1, h2, h3, h4, h5, h6
 a.txt-white
     &:hover
         color: #fff * 0.8
+
+*.cur-p.txt-brown
+    &:hover
+        color: $brown * 0.8
+
+a.txt-brown
+    &:hover
+        color: $brown * 0.8
 
 a.txt-black
     &:hover
@@ -163,11 +176,12 @@ a.txt-black
     border-radius: 5px
     max-width: 305px
     border: 1px solid black
-    white-space: normal !important
     .f-base
         font-family: $font-base
     &.brn
         border-radius: 0
+    &:hover
+        text-decoration: none
 
     [class*="uk-icon"]
         margin-right: 5px
@@ -180,6 +194,10 @@ a.txt-black
 .stucco-bg
     background-image: url("../images/noisy.png")
 
+.no-tdu
+    text-decoration: none
+    &:hover
+        text-decoration: none
 
 
 

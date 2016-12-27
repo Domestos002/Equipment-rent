@@ -12,6 +12,8 @@ body
     font-family: $font-base
     font-weight: 400
 
+
+
 input
     +phc(#a9a9a9)
     width: 100%
@@ -20,7 +22,7 @@ input
 
 .uk-container
     width: 100%
-    max-width: 1225px !important
+    max-width: 1237px !important
 
 .b-first-screen
     +retina-bg("fs.jpg", "fs@2x.jpg")
@@ -39,10 +41,10 @@ input
 
 .b-page-header
     margin-bottom: -75px
-
-.b-page-header__panel-actions
-    &.panel-actions
-        .panel-actions__item
+    z-index: 1000
+    &__panel-actions
+        z-index: 200
+        &-item
             width: 21px
             height: 21px
             line-height: 21px
@@ -50,126 +52,127 @@ input
             text-align: center
             background: $orange
             color: #fff
+            +trans()
             &:not(:last-child)
                 margin-right: 10px
-
-.b-page-header__navbar
-    padding: 0 35px
-    max-width: 1312px
-    margin: 0 auto
-    background-color: transparent
-    transform: translateY(-50%)
-    .navbar-inner
-        box-shadow: 0 7px 10px rgba(0,0,0,0.5)
-        border-radius: 15px
-        background: linear-gradient(-45deg, transparent 43%, rgba(255, 255, 255, 0.2) 50%, transparent 52%)
-        background-size: 5px 5px
-        position: relative
-        padding-left: 34px
-        padding-right: 34px
+            &:hover
+                color: #fff
+                background-color: $orange * 0.8
+    &__navbar
+        padding: 0 35px
+        max-width: 1312px
+        margin: 0 auto
+        background-color: transparent
+        transform: translateY(-50%)
         box-sizing: border-box
-        &:before
-            content: ''
-            z-index: -1
-            border-radius: 15px
-            +position(absolute, 0 0 0 0)
+        &-inner
             width: 100%
-            height: 100%
-            background-image: linear-gradient(to top, #ca5100, #fe9318)
-
-    &.navbar
-        box-sizing: border-box
-        .navbar__list
+            min-height: 40px //ddes
+            box-shadow: 0 7px 10px rgba(0,0,0,0.5)
+            border-radius: 15px
+            background: linear-gradient(-45deg, transparent 43%, rgba(255, 255, 255, 0.2) 50%, transparent 52%)
+            background-size: 5px 5px
+            position: relative
+            padding-left: 34px
+            padding-right: 34px
+            box-sizing: border-box
+            &:before
+                content: ''
+                z-index: -1
+                border-radius: 15px
+                +position(absolute, 0 0 0 0)
+                width: 100%
+                height: 100%
+                background-image: linear-gradient(to top, #ca5100, #fe9318)
+        &-list-wrapper
+            width: 100%
+        &-list
             box-sizing: border-box
             display: flex
             width: 100%
             justify-content: space-between
             align-items: stretch
-            &.list
-                .list__item
-                    display: flex
-                    flex-wrap: wrap
-                    align-items: center
-                    padding-top: 12px
-                    padding-bottom: 12px
-                    position: relative
-                    flex-grow: 1
-                    justify-content: space-between   ///frWEF
-                    &:nth-child(2n)
-                        &:before
-                            visibility: hidden
-                    &:before
-                        height: 51px
-                        content: ''
-                        width: 1px
-                        background-color: #ca5100
-                        box-shadow: 1px 0 0 0 rgba(254, 147, 24, 1)
-                    &:not(:last-child)
-                        &:nth-child(2n)
-                            &::after
-                                visibility: hidden
-                    &:after
-                        height: 51px
-                        content: ''
-                        width: 1px
-                        background-color: #ca5100
-                        box-shadow: 1px 0 0 0 rgba(254, 147, 24, 1)
-                    &:hover
-                        &.item
-                            .item__contain
-                                color: #fff * 0.8
-                    &.item
-                        .item__contain
-                            color: #fff
-                            line-height: 24px
+        &-link
+            color: #fff
+            line-height: 24px
+            &:hover
+                color: #fff * 0.8
+        &-item
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            padding-top: 12px
+            padding-bottom: 12px
+            position: relative
+            flex-grow: 1
+            justify-content: space-between   ///frWEF
+            &:nth-child(2n)
+                &:before
+                    visibility: hidden
+            &:before
+                height: 51px
+                content: ''
+                width: 1px
+                background-color: #ca5100
+                box-shadow: 1px 0 0 0 rgba(254, 147, 24, 1)
+            &:not(:last-child)
+                &:nth-child(2n)
+                    &::after
+                        visibility: hidden
+            &:after
+                height: 51px
+                content: ''
+                width: 1px
+                background-color: #ca5100
+                box-shadow: 1px 0 0 0 rgba(254, 147, 24, 1)
+            &:hover
+                &-link
+                    color: #fff * 0.8
+            &.item
+                .list__link
+                    color: #fff
+                    line-height: 24px
 
 
 
 .b-catalogue-preview
     padding-top: 79px
-    &.preview
-        .preview__title
-            +position(absolute, none none none 50%)
-            transform: translateX(-50%)
-            top: 11px
-        .preview__list
-            &.list
-                .list__item
-                    &.item
-                        .item__caption
-                            text-align: center
-                            padding-top: 22px
-                            padding-bottom: 37px
+    &__title
+        +position(absolute, none none none 50%)
+        transform: translateX(-50%)
+        top: 11px
+    &__caption
+        text-align: center
+        padding-top: 22px
+        padding-bottom: 37px
+
 .b-advantages
     padding-top: 35px
     padding-bottom: 37px
 
 .b-advantages-markered-list
-    &.markered-list
-        .markered-list__inner
-            .markered-list__item
-                text-align: left
-                display: flex
-                align-items: center
-                justify-content: flex-start
-                list-style: none
-                &:not(:last-child)
-                    margin-bottom: 22px
-                &.item
-                    .item__number
-                        margin-right: 28px
-                        padding: 0
-                        max-width: 38px
-                        height: 38px
-                        width: 100%
-                        border: 4px solid $grey
-                        border-radius: 50%
-                        background-color: #b25900
-                        text-align: center
-                        color: #fff
-                        font-size: 20px
-                        line-height: 30px
-                        box-sizing: border-box
+    &__item
+        text-align: left
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        list-style: none
+        &:not(:last-child)
+            margin-bottom: 22px
+    &__number
+        margin-right: 28px
+        padding: 0
+        max-width: 38px
+        height: 38px
+        width: 100%
+        border: 4px solid $grey
+        border-radius: 50%
+        background-color: #b25900
+        text-align: center
+        color: #fff
+        font-size: 20px
+        line-height: 30px
+        box-sizing: border-box
                         
 
 .b-benefit
@@ -182,15 +185,12 @@ input
     text-align: left
     font-size: 20px
     line-height: 28px
-    &.content-list
-        .content-list__list
-            &.list
-                .list-item
-                    list-style-type: none
-                    &::before
-                        content: '-'
-                        margin-right: 5px
-                        display: inline
+    &__item
+        list-style-type: none
+        &::before
+            content: '-'
+            margin-right: 5px
+            display: inline
 
 .b-additional-service
     padding-top: 53px
@@ -205,97 +205,98 @@ input
     height: 400px
 
 .b-stock
+    padding-top: 38px
     background-color: #fff
-    padding-bottom: 44px
-
-    .b-stock__slider
-        &.slider
-            .slider-dots-wrapper
-                margin-top: 18px
-                .uk-dotnav
-                    display: flex
-                    justify-content: center
-                    li
-                        list-style-type: none
-                        cursor: pointer
-                        &:not(:last-child)
-                            margin-right: 10px
-                        &.uk-active
-                            background-color: $orange
-                        &:hover
-                            background: $orange
-                        width: 131px
-                        height: 6px
-                        background-color: #888888
+    padding-bottom: 63px
+    &__slider
+        .slider-dots-wrapper
+            margin-top: 18px
+            .uk-dotnav
+                display: flex
+                justify-content: center
+                li
+                    list-style-type: none
+                    cursor: pointer
+                    &:not(:last-child)
+                        margin-right: 10px
+                    &.uk-active
+                        background-color: $orange
+                    &:hover
+                        background: $orange
+                    width: 131px
+                    height: 6px
+                    background-color: #888888
 
 
 .b-page-footer
-    .b-page-footer__dark-panel
+    &__dark-panel
         background-color: $black
-        &.panel
-            .panel__column-wrapper
+        &-column
+            padding-top: 30px
+            padding-bottom: 30px
+            display: flex
+            align-items: stretch
+            width: 100%
+            &-contain
+                width: 100%
+                box-sizing: border-box
                 display: flex
-                align-items: stretch
-                .panel__column
+                justify-content: space-between
+                align-items: center
+                border-left: 1px solid #555555
+                border-right: 1px solid #222222
+                padding-left: 58px
+                padding-right: 58px
+                .icon-statistic
+                    &:not(:last-child)
+                        margin-bottom: 10px
+
+        &-column-wrapper
+            display: flex
+            align-items: stretch
+            &:first-child
+                .b-page-footer__dark-panel-column-contain
+                    flex-direction: column
+                    border-left: none
+                    padding-left: 0
+                    padding-right: 30px
+                    justify-content: flex-start
+                    align-items: flex-start
+            &:last-child
+                .b-page-footer__dark-panel-column-contain
+                    flex-direction: column
+                    justify-content: flex-start
+                    border-right: none
+                    padding-right: 0
                     padding-top: 30px
-                    padding-bottom: 30px
-                    display: flex
-                    align-items: stretch
-                    width: 100%
-                    &.column
-                        .column__contain
-                            width: 100%
-                            box-sizing: border-box
-                            .icon-statistic
-                                &:not(:last-child)
-                                    margin-bottom: 10px
-                            &.contain
-                                display: flex
-                                justify-content: space-between
-                                align-items: center
-                                .contain__item
-                                    height: 100%
-                                    display: flex
-                                    flex-wrap: wrap
-                                    justify-content: center
-                                    flex-direction: column
-                                    max-width: 50%
-                                    a
-                                        &:not(:last-child)
-                                            margin-bottom: 20px
+                    text-align: right
 
-                .column__contain
-                    padding-right: 58px
-                    padding-left: 58px
-                &:last-child
-                    .column__contain
-                        padding-right: 0
-                        justify-content: flex-start !important
-                        flex-direction: column
-
-                &:first-child
-                    .column__contain
-                        padding-left: 0
-                        padding-right: 30px !important
-
+        &-column-item
+            height: 100%
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            flex-direction: column
+            max-width: 50%
+            a
                 &:not(:last-child)
-                    .column__contain
-                        border-right: 1px solid #555555
-
-                &:not(:first-child)
-                    .column__contain
-                        border-left: 1px solid #222222
+                    margin-bottom: 20px
 
 
 .b-socials
+    display: inline-block
     width: 100%
-    .b-socials-item
-        border-radius: 10px
+    &-item
+        border-radius: 5px
         background-color: $orange //egs
         color: #fff
+        width: 31px
+        height: 31px
+        line-height: 31px
         font-size: 22px
         +trans()
         &:hover
+            color: #fff
             background-color: $orange * 0.8
 
 
@@ -318,131 +319,135 @@ input
     padding-bottom: 44px
 
 .b-catalog__contain
-    &.contain
-        display: flex
-        justify-content: space-between
-        align-items: flex-start
-        .contain__sidebar
-            display: inline-block
-            vertical-align: top
-            background-color: #fff
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    &-sidebar
+        display: inline-block
+        vertical-align: top
+        background-color: #fff
+        border: 1px solid #cccccc
+        width: 19.23%
+        &-item
+            .uk-nav
+                > li > a
+                    padding: 15px 15px 15px 40px
+                    color: $black
+            &-title
+                position: relative
+                border-bottom: 1px solid #cccccc
+                &:after
+                    display: none
+                &:before
+                    content: ''
+                    position: absolute
+                    left: 15px
+                    top: 50%
+                    transform: translateY(-50%)
+                    border: 7px solid transparent
+                    border-left: 13px solid $orange
+            &-contain
+                border-bottom: 1px solid #cccccc
+                li
+                    padding-left: 40px
+                    position: relative
+                    text-decoration: underline
+                    &:before
+                        content: ''
+                        position: absolute
+                        left: 19px
+                        top: 50%
+                        transform: translateY(-50%)
+                        border: 7px solid transparent
+                        border-left: 13px solid #777777
+                    a
+                        color: $black
+                        text-decoration: underline
+                        &:hover
+                            color: darkgrey
+    &-main
+        display: inline-block
+        vertical-align: top
+        width: calc(100% - 19.23% - 25px)
+        &-item
             border: 1px solid #cccccc
-            width: 19.23%
-            &.sidebar
-                .sidebar__item
-                    &.item
-                        .item__title
-                            position: relative
-                            padding: 15px 15px 15px 35px
-                            color: $black
-                            border-bottom: 1px solid #cccccc
-                            &:after
-                                display: none
-                            &:before
-                                content: ''
-                                position: absolute
-                                left: 15px
-                                top: 50%
-                                transform: translateY(-50%)
-                                border: 7px solid transparent
-                                border-left: 13px solid $orange
-                        .item__contain
-                            border-bottom: 1px solid #cccccc
-                            li
-                                padding-left: 40px
-                                position: relative
-                                &:before
-                                    content: ''
-                                    position: absolute
-                                    left: 19px
-                                    top: 50%
-                                    transform: translateY(-50%)
-                                    border: 7px solid transparent
-                                    border-left: 13px solid #777777
-                                a
-                                    color: $black
-        .contain__main
-            display: inline-block
-            vertical-align: top
+            display: flex
+            justify-content: space-between
             background-color: #fff
-            border: 1px solid #cccccc
-            width: calc(100% - 19.23% - 25px)
-            &.main
-                .main__item
-                    display: flex
-                    justify-content: space-between
-                    &.item
-                        .item__img
-                            box-sizing: border-box
-                            border-right: 1px solid #cfcfcf
-                            padding: 34px 24px 25px 24px
-                            max-width: 248px
-                            width: 100%
-                            .img-wrapper
-                                max-width: 200px
-                                width: 100%
-                                height: auto
-                                img
-                                    width: 100%
-                                    max-width: 100%
-                                    height: auto
-                            .btn
-                                border: none
-                                width: 100%
-                                box-sizing: border-box
-                                line-height: 44px
-                        .item__info
-                            max-width: calc(100% - 248px)
-                            width: 100%
-                            padding: 46px 27px 38px 24px
-                            &.info
-                                .info__overall
-                                    &.overall
-                                        .overall__row
-                                            display: flex
-                                            span
-                                                &:first-child
-                                                    flex: 0 1 auto
-                                                &:nth-child(2)
-                                                    flex: 1
-                                                    border-bottom: 1px dashed $grey
-                                                &:nth-child(3)
-                                                    flex: 0 1 auto
-                                .info__result
-                                    &.result
-                                        .result__row
-                                            display: flex
-                                            span
-                                                font-family: $font-base-bold
+            &:not(:last-child)
+                margin-bottom: 30px
+        &-img
+            box-sizing: border-box
+            border-right: 1px solid #cfcfcf
+            padding: 34px 24px 25px 24px
+            max-width: 248px
+            width: 100%
+            .img-wrapper
+                max-width: 200px
+                width: 100%
+                height: auto
+                img
+                    width: 100%
+                    max-width: 100%
+                    height: auto
+            .btn
+                border: none
+                width: 100%
+                box-sizing: border-box
+                line-height: 44px
+                font-family: $font-base
+                &:hover
+                    color: #fff
+                    background-color: $orange * 0.8
 
-                                                &:first-child
-                                                    flex: 0 1 auto
-                                                &:nth-child(2)
-                                                    flex: 1
-                                                    border-bottom: 1px dashed $grey
-                                                &:nth-child(3)
-                                                    flex: 0 1 auto
+        &-info
+            max-width: calc(100% - 248px)
+            width: 100%
+            padding: 46px 27px 38px 24px
+            &-item
+                display: flex
+                &:not(:last-child)
+                    margin-bottom: 4px
+                span
+                    &:first-child
+                        flex: 0 1 auto
+                    &:nth-child(2)
+                        flex: 1
+                        border-bottom: 1px dashed $grey
+                    &:nth-child(3)
+                        text-align: left
+                        flex-grow: 0
+                        flex-shrink: 0
+                        min-width: 135px
+                    .elaboration
+                        display: inline
+                        &:after
+                            content: '*'
+                            color: $red
+                &.txt-black
+                    span
+                        color: $black
 
 
 .b-contacts
     padding-top: 50px
-    .b-contacts__info
-        &.info
-            .info__item
-                display: flex
-                justify-content: flex-start
-                align-items: center
-                &:not(:last-child)
-                    margin-bottom: 15px
-                .uk-icon-button
-                    border-radius: 10px
-                    background-color: $orange
-                    margin-right: 20px
-                    color: #fff
-                    font-size: 30px
-                    line-height: 50px
-                    width: 50px
-                    height: 51px
+
+.b-contacts__info
+    &__info-item
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        &:not(:last-child)
+            margin-bottom: 15px
+        .uk-icon-button
+            border-radius: 10px
+            background-color: $orange
+            margin-right: 20px
+            color: #fff
+            font-size: 30px
+            line-height: 50px
+            width: 50px
+            height: 51px
 
 .b-contacts__map
     height: 432px
@@ -460,4 +465,3 @@ input
                 content: '-'
             a
                 color: $black
-                &:hover

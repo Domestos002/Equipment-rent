@@ -1,7 +1,7 @@
 ;(function () {
     function num() {
         var i = 1;
-        $(".b-advantages-markered-list").find(".item__number").each(function () {
+        $(".b-advantages-markered-list").find(".b-advantages-markered-list__number").each(function () {
             $(this).append(i);
             i++;
         });
