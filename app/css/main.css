@@ -11408,7 +11408,7 @@ input:-ms-input-placeholder {
 }
 
 .b-first-screen {
-  background-image: url('../images/fs.jpg?1482920768');
+  background-image: url('../images/fs.jpg?1482903420');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1920px 591px;
@@ -11420,7 +11420,7 @@ input:-ms-input-placeholder {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .b-first-screen {
-    background-image: url('../images/fs@2x.jpg?1482920768');
+    background-image: url('../images/fs@2x.jpg?1482903442');
   }
 }
 .b-first-screen .uk-container {
@@ -11999,11 +11999,13 @@ input:-ms-input-placeholder {
   z-index: 2000;
   position: relative;
   transition: all 0.3s ease 0s;
-  color: #000;
+  color: #fff;
   border-radius: 5px;
   font-size: 30px;
+  background-color: #ff7f00;
 }
 .off-canvas-toggle:hover {
+  background-color: #ff7f00;
   color: #cccccc;
 }
 
@@ -12328,36 +12330,16 @@ input:-ms-input-placeholder {
   }
 }
 @media (max-width: 959px) {
-  .b-catalog__contain-main-item {
-    flex-direction: column;
-  }
-  .b-catalog__contain-main-item .btn {
-    max-width: 100%;
-  }
-  .b-catalog__contain-main-img {
+  .b-catalog__contain-sidebar, .b-catalog__contain-main {
     width: 100%;
-    max-width: 100%;
-  }
-  .b-catalog__contain-main-info {
-    width: 100%;
-    max-width: 100%;
   }
 
-  .b-catalog__contain-main {
-    width: calc(100% - 245px);
+  .b-catalog__contain {
+    flex-direction: column;
   }
-  .b-catalog__contain-main-img {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px 25px;
-    justify-content: center;
-  }
-  .b-catalog__contain-main-img .img-wrapper {
-    max-width: 100%;
-  }
-  .b-catalog__contain-main-info {
-    width: initial;
-    max-width: 100%;
+
+  .b-catalog__contain-sidebar {
+    margin-bottom: 30px;
   }
 
   .b-socials {
@@ -12460,6 +12442,11 @@ input:-ms-input-placeholder {
   }
 }
 @media (max-width: 767px) {
+  .b-catalog__contain-main-item .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .sm-fz40 {
     font-size: 40px;
   }
@@ -12471,11 +12458,6 @@ input:-ms-input-placeholder {
   .b-header-logo {
     font-size: 40px;
     width: 260px;
-  }
-
-  .b-catalog__contain-sidebar {
-    width: 100%;
-    margin-bottom: 30px;
   }
 
   .b-catalog__contain {

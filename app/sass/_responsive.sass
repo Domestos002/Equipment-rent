@@ -9,33 +9,14 @@
 
 @media (max-width: $breakpoint-medium-max)
 
+    .b-catalog__contain-sidebar, .b-catalog__contain-main
+        width: 100%
 
-    .b-catalog__contain-main
-        &-item
-            flex-direction: column
-            .btn
-                max-width: 100%
+    .b-catalog__contain
+        flex-direction: column
 
-        &-img
-            width: 100%
-            max-width: 100%
-        &-info
-            width: 100%
-            max-width: 100%
-
-    .b-catalog__contain-main
-        width: calc(100% - 245px)
-        &-img
-            width: 100%
-            max-width: 100%
-            padding: 20px 25px
-            justify-content: center
-            .img-wrapper
-                max-width: 100%
-        &-info
-            width: initial
-            max-width: 100%
-
+    .b-catalog__contain-sidebar
+        margin-bottom: 30px
 
     .b-socials
         justify-content: center
@@ -132,6 +113,12 @@
 
 @media (max-width: $breakpoint-small-max)
 
+    .b-catalog__contain-main-item
+        .btn
+            width: 100%
+            max-width: 100%
+
+
     @each $fz in (40)
         .sm-fz#{$fz}
             font-size: $fz + px
@@ -143,9 +130,6 @@
         font-size: 40px
         width: 260px
 
-    .b-catalog__contain-sidebar
-        width: 100%
-        margin-bottom: 30px
 
     .b-catalog__contain
         flex-direction: column
