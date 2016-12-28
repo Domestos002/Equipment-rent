@@ -11408,7 +11408,7 @@ input:-ms-input-placeholder {
 }
 
 .b-first-screen {
-  background-image: url('../images/fs.jpg?1482479990');
+  background-image: url('../images/fs.jpg?1482920768');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 1920px 591px;
@@ -11420,7 +11420,7 @@ input:-ms-input-placeholder {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .b-first-screen {
-    background-image: url('../images/fs@2x.jpg?1482479975');
+    background-image: url('../images/fs@2x.jpg?1482920768');
   }
 }
 .b-first-screen .uk-container {
@@ -11999,12 +11999,11 @@ input:-ms-input-placeholder {
   z-index: 2000;
   position: relative;
   transition: all 0.3s ease 0s;
-  color: #fff;
-  border-radius: 15px;
-  font-size: 20px;
+  color: #000;
+  border-radius: 5px;
+  font-size: 30px;
 }
 .off-canvas-toggle:hover {
-  background-color: initial;
   color: #cccccc;
 }
 
