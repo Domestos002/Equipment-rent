@@ -11605,6 +11605,7 @@ input:-ms-input-placeholder {
   height: 38px;
   width: 100%;
   border: 4px solid #aaaaaa;
+  font-family: "BloggerSans-Bold";
   border-radius: 50%;
   background-color: #b25900;
   text-align: center;
