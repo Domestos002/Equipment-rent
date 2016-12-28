@@ -11398,7 +11398,7 @@ input:-ms-input-placeholder {
 
 .uk-container {
   width: 100%;
-  max-width: 1237px !important;
+  max-width: 1200px !important;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -11427,9 +11427,14 @@ input:-ms-input-placeholder {
   min-height: 577px;
 }
 
-.b-catalog, .b-advantages, .b-benefit, .b-additional-service, .b-contacts, .b-static {
+.b-advantages, .b-benefit, .b-additional-service, .b-contacts {
   padding-top: 66px;
   overflow: hidden;
+}
+
+.b-catalog, .b-static {
+  padding-top: 50px;
+  padding-bottom: 33px;
 }
 
 .b-catalogue-preview {
@@ -11513,21 +11518,25 @@ input:-ms-input-placeholder {
 .b-page-header__navbar-list {
   box-sizing: border-box;
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: stretch;
 }
 .b-page-header__navbar-link {
   color: #fff;
   line-height: 24px;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: center;
 }
 .b-page-header__navbar-link:hover {
   color: #cccccc;
+  text-decoration: none;
 }
 .b-page-header__navbar-item {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   padding-top: 12px;
   padding-bottom: 12px;
   position: relative;
@@ -11566,11 +11575,11 @@ input:-ms-input-placeholder {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 23px;
+  top: 15px;
 }
 .b-catalogue-preview__caption {
   text-align: center;
-  padding-top: 16px;
+  padding-top: 23px;
   padding-bottom: 37px;
 }
 
@@ -11644,6 +11653,9 @@ input:-ms-input-placeholder {
   padding-top: 40px;
   background-color: #fff;
   padding-bottom: 63px;
+}
+.b-stock .uk-container {
+  max-width: 1200px !important;
 }
 .b-stock__slider .slider-dots-wrapper {
   margin-top: 18px;
@@ -11793,10 +11805,6 @@ input:-ms-input-placeholder {
   background-position: 0 -81px;
   height: 31px;
   width: 88px;
-}
-
-.b-catalog {
-  padding-bottom: 44px;
 }
 
 .b-catalog__contain {
@@ -11958,7 +11966,7 @@ input:-ms-input-placeholder {
 }
 
 .b-static {
-  padding-bottom: 43px;
+  padding-bottom: 62px;
 }
 
 .b-breadcrumb {

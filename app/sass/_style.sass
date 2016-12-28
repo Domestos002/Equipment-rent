@@ -22,7 +22,7 @@ input
 
 .uk-container
     width: 100%
-    max-width: 1237px !important
+    max-width: 1200px !important
     padding-left: 15px
     padding-right: 15px
 
@@ -40,9 +40,13 @@ input
     .uk-container
         min-height: 577px
 
-.b-catalog, .b-advantages, .b-benefit, .b-additional-service, .b-contacts , .b-static
+.b-advantages, .b-benefit, .b-additional-service, .b-contacts
     padding-top: 66px
     overflow: hidden
+
+.b-catalog, .b-static
+    padding-top: 50px
+    padding-bottom: 33px
 
 .b-catalogue-preview
     padding-top: 77px
@@ -51,6 +55,7 @@ input
     align-items: flex-end
     max-width: 1203px
     +position(absolute, 15px 0 96px 0)
+
 
 .b-page-header
     margin-bottom: -75px
@@ -109,18 +114,22 @@ input
         &-list
             box-sizing: border-box
             display: flex
-            width: 100%
             justify-content: space-between
             align-items: stretch
         &-link
             color: #fff
             line-height: 24px
+            display: flex
+            align-items: center
+            flex-grow: 1
+            justify-content: center //fe
             &:hover
                 color: #fff * 0.8
+                text-decoration: none
         &-item
             display: flex
             flex-wrap: wrap
-            align-items: center
+            align-items: stretch
             padding-top: 12px
             padding-bottom: 12px
             position: relative
@@ -159,10 +168,10 @@ input
     &__title
         +position(absolute, none none none 50%)
         transform: translateX(-50%)
-        top: 23px
+        top: 15px
     &__caption
         text-align: center
-        padding-top: 16px
+        padding-top: 23px
         padding-bottom: 37px
 
 .b-advantages
@@ -224,6 +233,8 @@ input
     height: 400px
 
 .b-stock
+    .uk-container
+        max-width: 1200px !important
     padding-top: 40px
     background-color: #fff
     padding-bottom: 63px
@@ -346,9 +357,6 @@ input
 
 .icon-statistic
     +sprite(statistic)
-
-.b-catalog
-    padding-bottom: 44px
 
 .b-catalog__contain
     display: flex
@@ -484,7 +492,7 @@ input
     width: 100%
 
 .b-static
-    padding-bottom: 43px
+    padding-bottom: 62px
 
 .b-breadcrumb
     margin-bottom: 15px
