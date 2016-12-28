@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block pageTitle %}{% endblock %}</title>
 
@@ -10,6 +11,7 @@
     {% include "stylesheets.twig" %}
 </head>
 <body>
+<div class="site-wrapper">
     <!-- Header block -->
     {% include "header.twig" %}
     <!-- Header block end -->
@@ -24,5 +26,21 @@
 
     <!-- Scripts -->
     {% include "scripts.twig" %}
+</div>
+<div id="off-canvas-bar" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <div class="off-canvas-wrapper">
+            <div id="off-canvas-close" class="uk-icon-button cur-p uk-icon-times-circle"></div>
+        </div>
+        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
+            <li><a href="">Статьи</a></li>
+            <li><a href="">Аренда техники</a></li>
+            <li class="uk-active"><a href="">Услуги</a></li>
+            <li><a href="">Сотрудничество</a></li>
+            <li><a href="">Вакансии</a></li>
+            <li><a href="">Контакты</a></li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>

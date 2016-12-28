@@ -29,6 +29,14 @@
 
     $(function () {
         num();
+
+        $("#off-canvas-close").click(function () {
+/*
+            $("#off-canvas-bar").hide();
+*/
+            UIkit.offcanvas.hide();
+        });
+
         $('a.js-scrollScreen[href*="#"]:not([href="#"])').click(function () {
             if ($(this).hasClass('sliding-panel-link')) {
                 $('body').removeClass('ovh');

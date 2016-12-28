@@ -3,17 +3,28 @@
     .b-advantages__adv-list-item-wrapper
         width: 175px
 
-@media (max-width: $breakpoint-medium-max)
-    .b-catalog__contain-sidebar
-        width: 100%
-        margin-bottom: 30px
+@media (max-width: 1250px)
+    .b-first-screen__content
+        padding: 0 25px
 
-    .b-catalog__contain
-        flex-direction: column
-        align-items: center
+@media (max-width: $breakpoint-medium-max)
+
 
     .b-catalog__contain-main
-        width: 100%
+        &-item
+            flex-direction: column
+            .btn
+                max-width: 100%
+
+        &-img
+            width: 100%
+            max-width: 100%
+        &-info
+            width: 100%
+            max-width: 100%
+
+    .b-catalog__contain-main
+        width: calc(100% - 245px)
         &-img
             width: 100%
             max-width: 100%
@@ -26,22 +37,30 @@
             max-width: 100%
 
 
+    .b-socials
+        justify-content: center
 
-    .b-catalog__contain-main-item
+
+    .off-canvas-toggle
+        display: inline-block
+
+
+    .b-catalog, .b-advantages, .b-benefit, .b-additional-service, .b-contacts, .b-catalogue-preview, .b-static
         padding-bottom: 20px
-        flex-direction: column
-        .btn
-            max-width: 100%
+        padding-top: 20px
 
-    .b-catalog__contain-main-info
-        padding: 0 25px
+    .b-contacts
+        padding-bottom: 0
 
-    .b-first-screen__content
-        padding-left: 25px
-        padding-right: 25px
+    .b-page-header
+        margin-bottom: 0
 
-    .b-catalog
-        padding-top: 65px
+    .b-page-content
+        padding-top: 0
+
+
+    .b-page-footer__tags
+        display: none
 
     .b-page-footer__dark-panel
         padding-top: 15px
@@ -109,11 +128,55 @@
         .uk-parent
             display: block
 
-@media (max-width: $breakpoint-mini-max)
-    .m-fz15
-        font-size: 15px
+
 
 @media (max-width: $breakpoint-small-max)
+
+    @each $fz in (40)
+        .sm-fz#{$fz}
+            font-size: $fz + px
+
+    .b-contacts
+        margin-bottom: 0
+
+    .b-header-logo
+        font-size: 40px
+        width: 260px
+
+    .b-catalog__contain-sidebar
+        width: 100%
+        margin-bottom: 30px
+
+    .b-catalog__contain
+        flex-direction: column
+        align-items: center
+
+    .b-catalog__contain-main
+        width: 100%
+        &-img
+            width: 100%
+            max-width: 100%
+            padding: 20px 25px
+            justify-content: center
+            .img-wrapper
+                max-width: 100%
+        &-info
+            width: initial
+            max-width: 100%
+
+
+
+    .b-catalog__contain-main-item
+        padding-bottom: 20px
+        flex-direction: column
+
+    .b-catalog__contain-main-info
+        padding: 0 25px
+
+    .b-first-screen__content
+        padding-left: 25px
+        padding-right: 25px
+
     .b-first-screen
         min-height: 360px
         .uk-container
@@ -128,8 +191,114 @@
         padding-bottom: 20px
 
 
-@media (max-width: 400px)
+@media (max-width: $breakpoint-mini-max)
+    .b-first-screen__content
+        align-items: center
+        justify-content: space-around
 
+    .b-first-screen
+        position: relative
+        .uk-container
+            position: static
+            min-height: 280px
+
+    .b-first-screen__content
+        top: 0
+        right: 0
+        left: 0
+        bottom: 0
+
+    .uk-offcanvas
+        .uk-offcanvas-bar
+            width: 100%
+
+    .b-contacts__info-item .uk-icon-button //fw
+        max-width: 30px
+        height: 30px
+        font-size: 17px
+        line-height: 30px
+
+    .m-txt-justify
+        text-align: justify
+
+    .b-breadcrumb
+        margin-bottom: 15px
+
+    .b-catalogue-preview__title
+        top: 0
+
+    @each $mb in (0, 25, 20, 15, 35)
+        .m-mb#{$mb}
+            margin-bottom: $mb + px
+
+    @each $fz in (16, 15, 18, 25, 35, 30)
+        .m-fz#{$fz}
+            font-size: $fz + px
+
+    [class*="lh"]
+        line-height: 1.2em
+
+    .b-footer-logo
+        line-height: 1em
+        width: 197px
+        font-size: 30px
+        margin-bottom: 10px
+
+    .b-content-list
+        font-size: 15px
+        line-height: 1.6em
+
+    .b-catalogue-preview__item
+        .img-wrapper
+            width: 200px
+            margin: 0 auto
+            height: auto
+
+    .content-title
+        font-size: 22px
+
+    .b-catalogue-preview__caption
+        padding-top: 10px
+        padding-bottom: 10px
+
+    .b-advantages-markered-list__item
+        align-items: flex-start
+
+    .b-advantages-markered-list__number
+        transform: translateY(20%)
+        font-size: 15px
+        max-width: 25px
+        height: 25px
+        margin-right: 15px
+        line-height: 17px
+
+    .b-catalog__contain-main-item:not(:last-child)
+        margin-bottom: 20px
+
+
+
+    .b-page-header__navbar
+        padding: 0 15px
+
+    .b-catalog__contain-main-info-item
+        span
+            font-size: 15px
+
+    .b-catalog__contain-main-info
+        padding: 0 15px
+
+    .b-catalog__contain-main-img
+        padding: 15px
+
+    .btn
+        font-size: 18px
+
+    .fz25
+        font-size: 18px
+
+
+
+@media (max-width: 400px)
 
     .b-header-logo
         width: 245px
@@ -139,28 +308,5 @@
 
     .sm-fz33
         font-size: 33px
-
-    .b-first-screen__content
-        align-items: center
-        justify-content: space-around
-
-
-
-
-//@media (max-width: $screen-md - 1px)
-
-
-//@media (max-width: $screen-sm - 1px)
-
-
-//@media (max-width: $screen-xs - 1px)
-
-//@media screen and (max-width: 767px) and (orientation: landscape)
-//@media screen and (max-width: 767px) and (orientation: portrait)
-//@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)
-//@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait)
-
-
-
 
 
