@@ -338,12 +338,14 @@ input
 .b-page-footer__tags
     padding-top: 38px
     padding-bottom: 38px
-    background: linear-gradient(-45deg, transparent 43%, rgba(255, 255, 255, 0.2) 50%, transparent 52%)
+    background-image: linear-gradient(to top, #331507, #783819, #a85225)
     position: relative
+    z-index: 200
     &:before
         content: ''
         display: block
-        background-image: linear-gradient(to top, #3d1b0c, #a85225)
+        background: linear-gradient(-45deg, transparent 43%, rgba(255, 255, 255, 0.1) 50%, transparent 52%)
+        background-size: 4px 4px
         +position(absolute, 0 0 0 0)
 
 .b-footer-logo
@@ -514,8 +516,6 @@ input
 .off-canvas-toggle
     display: none
     z-index: 2000
-    background-image: linear-gradient(to top, #ca5100, #fe9318)
-    //background: linear-gradient(-45deg, transparent 43%, rgba(255, 255, 255, 0.2) 50%, transparent 52%)
     position: relative
     +trans()
     color: #fff
